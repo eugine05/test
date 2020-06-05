@@ -1,0 +1,15 @@
+.modal {
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 32, 36, 0.95);
+}
+
+.modal-in-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

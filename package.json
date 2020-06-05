@@ -8,13 +8,17 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tslint": "tslint --exclude src/serviceWorker.js --project ."
   },
   "eslintConfig": {
     "extends": "react-app"

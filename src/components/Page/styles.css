@@ -1,0 +1,32 @@
+.wrapper {
+  width: 800px;
+  height: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background: #3b4038;
+  border-radius: 40px;
+}
+
+.window {
+  height: 400px;
+  background: rgba(13, 19, 22, 0.5);
+  margin: 50px;
+  padding: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 100px;
+}
+
+.buttons button:first-child {
+  margin-right: 50px;
+}
+
+
