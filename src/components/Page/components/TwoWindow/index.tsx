@@ -35,7 +35,7 @@ class TwoWindow extends React.Component<IProps, IState> {
    * @param {string} value название файла
    */
   handleChange = (value: string) => {
-    api.getContent(`http://localhost:3000/${value}.json`)
+    api.getJson(`http://localhost:3000/${value}.json`)
       .then((response: any) => {
         this.setState({ selectData: JSON.parse(response) });
       });

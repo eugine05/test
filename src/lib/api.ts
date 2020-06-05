@@ -1,5 +1,5 @@
 export default {
-  getContent: async (url: string) => {
+  getJson: async (url: string) => {
     return new Promise((succeed, fail) => {
       const request = new XMLHttpRequest();
       request.open('GET', url, true);
