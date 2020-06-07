@@ -1,5 +1,6 @@
 import React from 'react';
 import api from '../../../../lib/api';
+import DropDownMenu from './components/DropDownMenu';
 import './styles.css';
 
 export interface IProps {
@@ -51,22 +52,35 @@ class TwoWindow extends React.Component<IProps, IState> {
   }
 
   /**
+   * Функция изменения значения селекта
+   * @param {string} data значение выбора
+   */
+  onMenuItemClick = (data: string) => {
+    this.handleChange(data);
+    this.setState({ selectType: data });
+  }
+
+  /**
    * Рендер
    */
   render() {
-    const { selectType, selectData } = this.state;
-
+    const { selectData } = this.state;
+    const name = ['file1', 'file2'];
     return (
       <div className="select-wrapper">
-        <select onChange={this.changeSelect} value={selectType}>
-          <option disabled value="">Выберите пункт</option>
-          <option value="file1">file1</option>
-          <option value="file2">file2</option>
-        </select>
 
-        <select>
-          {selectData.map((value, key) => <option value={value} key={key}>{value}</option>)}
-        </select>
+        <DropDownMenu
+          items={name}
+          onMenuItemClick={this.onMenuItemClick}
+        >
+          Выбрать файл
+        </DropDownMenu>
+
+        <DropDownMenu
+          items={selectData}
+        >
+          Содержимое
+        </DropDownMenu>
       </div>
     );
   }
