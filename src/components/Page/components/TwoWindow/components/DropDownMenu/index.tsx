@@ -2,9 +2,9 @@ import React from 'react';
 import './styles.css';
 
 export interface IProps {
-  /** Модалка открыта */
+  /** список меню */
   items: string[];
-  /** Модалка открыта */
+  /** колбэк выбора */
   onMenuItemClick?: (data: string) => void;
 }
 
